@@ -180,6 +180,138 @@
     transform: scale(1.1);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
+
+*/* General Reset */
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Council Section Styling */
+  .council-section {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .council-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffa500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .council-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Subsection Styling */
+  .council-subsection {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100%; /* Ensure each subsection takes full width */
+  }
+  
+  /* Title for Each Subsection */
+  .council-subsection h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Grid Layout for Members */
+  .council-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%; /* Ensure grid stays within its section */
+  }
+  
+  /* Individual Member Card Styling */
+  .council-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .council-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .council-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .council-card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  /* Hover Effects for Cards */
+  .council-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Flex Layout for Older Member Styles */
+  .council-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .member {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .member .name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .member .position {
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  /* Ensure Each Council Subsection Stacks Vertically */
+  .council-section .council-subsection {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+.council-subsection {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
   
   .contact-section {
     background: linear-gradient(135deg, #ffcc00, #ffa500);
