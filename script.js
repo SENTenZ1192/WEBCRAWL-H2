@@ -7,6 +7,17 @@ window.addEventListener("scroll", () => {
       header.classList.remove("scrolled");
     }
   });
+
+  window.addEventListener("scroll", () => {
+    const hero = document.querySelector(".hero");
+    const scrollY = window.scrollY; // Current scroll position
+    const fadePoint = 300; // Adjust this value to control fade speed
+  
+    // Calculate new opacity value
+    const opacity = Math.max(1 - scrollY / fadePoint, 0);
+    hero.style.opacity = opacity;
+  });
+  
   
   // Smooth scroll for links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
