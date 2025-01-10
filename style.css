@@ -86,15 +86,15 @@
     text-align: center;
     color: #fff;
     z-index: 1;
-    opacity: 1; /* Start fully visible */
-    transition: opacity 0.2s ease-in-out; /* Smooth fade */
+    opacity: 1; 
+    transition: opacity 0.2s ease-in-out; 
   }
   
   .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 20px;
-    color: #ffcc00; /* Change this to your desired color */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Optional shadow for a glowing effect */
+    color: #ffcc00; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); 
   }
   .hero-content h1 .highlight {
     color: #ffa500;
@@ -130,7 +130,7 @@
   
   .about-section {
     background: #fff;
-    text-align: center; /* Center-align the text */
+    text-align: center; 
     padding: 50px 20px;
     color: #333;
     font-family: 'Arial', sans-serif;
@@ -138,23 +138,191 @@
   
   .about-section h2 {
     font-size: 2.5rem;
-    color: #ffa500; /* A vibrant color for the heading */
+    color: #ffa500; 
     margin-bottom: 20px;
-    text-transform: uppercase; /* Makes the text look more formal */
-    letter-spacing: 2px; /* Adds spacing between letters for a premium look */
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
   }
   
   .about-section p {
     font-size: 1.2rem;
-    line-height: 1.8; /* Improves readability */
-    max-width: 800px; /* Limits the width of the text */
-    margin: 0 auto; /* Centers the text block */
-    color: #555; /* Slightly lighter color for contrast */
-    background: #f9f9f9; /* Adds a subtle background color */
+    line-height: 1.8; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    color: #555; 
+    background: #f9f9f9; 
     padding: 20px;
-    border-radius: 10px; /* Rounds the edges of the text block */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
+
+/* Council Section */
+.council-section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffcc00, #ffa500);
+  text-align: center;
+  color: #fff;
+}
+
+.council-section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #ffb347, #ff8c00); 
+  padding: 15px 30px;
+  display: inline-block;
+  border: 3px solid #ffae42; 
+  border-radius: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.council-section p {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333; 
+}
+
+
+/* Council Categories */
+.council-category h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+.council-lead, .council-submembers {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Council Cards */
+.council-card {
+  perspective: 1000px;
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.council-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.council-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.council-card:hover .council-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back of Cards */
+.council-card-front, .council-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.council-card-front {
+  background: #fff;
+}
+
+.council-card-back {
+  background: linear-gradient(135deg, #333, #444);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* Council Photos */
+.council-photo {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  overflow: hidden; 
+  margin-bottom: 15px;
+  border: 3px solid #ffcc00; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+/* Text in Cards */
+.council-card h4 {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.council-card-front h4 {
+  color: #444;
+}
+
+.council-card-back h4 {
+  color: #ffcc00;
+}
+
+.council-card p {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  text-align: center;
+}
+
+.council-card-back p {
+  color: #fff;
+}
+
+/* Button-Like Effects on Text (Optional) */
+.council-card-back p {
+  background: rgba(255, 204, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .council-card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .council-category h3 {
+    font-size: 1.5rem;
+  }
+
+  .council-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
   
   
   .gallery-section {
@@ -330,4 +498,116 @@
     font-size: 2.5rem;
     color: #333;
   }
+  
+/* Map Section Styling */
+.map-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f9f9f9, #ececec);
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;  
+  color: #000000; 
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+
+.map-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 5px solid #ffcc00; 
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover Effect for Map Container */
+.map-container:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Feedback Section Styling */
+.feedback-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ececec, #f9f9f9);
+  text-align: center;
+}
+
+.feedback-section h2 {
+  font-size: 2.8rem;
+  color: #ff6f61;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+}
+
+.feedback-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Feedback Links Styling */
+.feedback-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; 
+}
+
+.feedback-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6f61, #ffcc00);
+  padding: 15px 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 70%; 
+  text-align: center;
+}
+
+.feedback-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffcc00, #ff6f61);
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 768px) {
+  .feedback-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .feedback-link {
+    width: auto; 
+  }
+}
+
   
